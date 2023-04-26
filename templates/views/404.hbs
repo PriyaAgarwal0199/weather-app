@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>404 Page</title>
+          <link rel="icon" href="./img/weather.png">
+        <link rel="stylesheet" href="./css/style.css">
+       
+    </head>
+<body>
+<div class="main-content">
+    {{!-- to load  partial in view this is the format >with partial filename without extension 
+    and the path because we have already set the path whgile configuring hbs for partials  --}}
+{{>header}}
+{{!-- <p>Created By: {{name}}</p> --}}
+<p>{{errorMsg}}</p>
+</div>
+{{>footer}}
+</body>
+</html>

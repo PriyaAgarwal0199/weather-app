@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="./img/weather.png">
+        <link rel="stylesheet" href="./css/style.css">
+        
+    </head>
+<body>
+
+    {{!-- to load  partial in view this is the format >with partial filename without extension 
+    and the path because we have already set the path whgile configuring hbs for partials  --}}
+<div class="main-content">
+{{>header}}
+<p>Use this site to get your weather!!</p>
+<form>
+    <input placeholder ="address">
+    <button>Search</button>
+</form>
+{{!-- <p>Created By: {{name}}</p> --}}
+<p id="location"></p>
+<p id="weather"></p>
+<p id="errorMsg"></p>
+</div>
+<script src="./app.js"></script>
+{{>footer}}
+</body>
+</html>
