@@ -5,7 +5,7 @@ const hbs = require('hbs');
 const geocode = require('./utills/geocode');
 const forecast = require('./utills/forecast');
 const app = express();
-//console.log(__dirname);
+const port = process.env.PORT || 3000
 const publicDirPath = path.join(__dirname,'../public')
 const viewpath = path.join(__dirname,'../templates/views')
 const partialspath = path.join(__dirname,'../templates/partials')
@@ -84,6 +84,6 @@ res.render('404',{
     title:"404"
 })
 })
-app.listen(3000,()=>{
-    console.log("Server has started running at port 3000.....")
+app.listen(port,()=>{
+    console.log(`Server has started running at port ${port}.`)
 })
