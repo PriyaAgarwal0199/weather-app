@@ -14,8 +14,9 @@ const forecast = (lat,long,cb)=>{
                     cb("Unable to find location in forecast.")
             }
                 else{
-                    let {weather_descriptions,temperature,feelslike} = body.current
-                    cb(undefined,`${weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} out.`)
+                    let {weather_descriptions,temperature,feelslike,humidity} = body.current
+                    cb(undefined,`${weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} out.
+                     The humidity is ${humidity}% out`)
                 }
     })
 }
